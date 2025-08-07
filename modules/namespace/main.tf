@@ -1,6 +1,6 @@
 resource "vcfa_supervisor_namespace" "supervisor_namespace" {
   name_prefix  = "lab"
-  project_name = "default-project"
+  project_name = var.project_name
   class_name   = "small"
   description  = "Supervisor Namespace with prefix [lab] created by Terraform"
   region_name  = var.region_name

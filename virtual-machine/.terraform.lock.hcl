@@ -4,6 +4,7 @@
 provider "registry.terraform.io/hashicorp/kubernetes" {
   version = "2.37.1"
   hashes = [
+    "h1:+37jC6JlkPyPvDHudK3qaj7ZVJ0Zy9zc9+oq8h1WayA=",
     "h1:qo9Ue/rIEnvxOpiK9qizwRFV7rvb5gCziKVytIcZHyk=",
     "zh:0ed097413c7fc804479e325966886b405dc0b75ad2b4f54ce4df1d8e4802b397",
     "zh:17dcf4a685a00d2d048671124e8a1a8e836b58ecd2ef628a1c666fe0ced2e598",
@@ -23,6 +24,7 @@ provider "registry.terraform.io/hashicorp/kubernetes" {
 provider "registry.terraform.io/hashicorp/null" {
   version = "3.2.4"
   hashes = [
+    "h1:L5V05xwp/Gto1leRryuesxjMfgZwjb7oool4WS1UEFQ=",
     "h1:hkf5w5B6q8e2A42ND2CjAvgvSN3puAosDmOJb3zCVQM=",
     "zh:59f6b52ab4ff35739647f9509ee6d93d7c032985d9f8c6237d1f8a59471bbbe2",
     "zh:78d5eefdd9e494defcb3c68d282b8f96630502cac21d1ea161f53cfe9bb483b3",
@@ -43,6 +45,7 @@ provider "registry.terraform.io/vmware/vcfa" {
   version = "1.0.0"
   hashes = [
     "h1:KtTJR1mYdsfqAr2ByWtA9WbClH3k5DUK1gddLDQK6tA=",
+    "h1:SBss99lGtgAYjCRQtuHyH6fKbfwxdI7bOeLA7bGuT20=",
     "zh:065b54882db6c39b976aac3bbf93ffcbfb18fadc4a96f028f653d18ad70e9e44",
     "zh:07323e2636dd8616bd362dd335bdb9e05b7bdc1b3c60d1245b95e90332b56bd2",
     "zh:0b3c1abc708e80cf80b3b2e99b7a1d7a9b1d23101f16ea6e9f41188d69a224d0",

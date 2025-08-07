@@ -9,3 +9,9 @@ variable "vpc_name" {
 variable "zone_name" {
   type        = string
 }
+
+variable "project_name" {
+  type        = string
+  description = "The VCF Automation project name"
+  default     = "default-project"
+}

@@ -1,0 +1,11 @@
+# VCF Automation Configuration
+vcfa_url = "https://your-vcfa-instance.example.com"
+vcfa_refresh_token = "your-refresh-token-here"
+vm_user_password = "your-vm-password-here"
+
+# Optional: Override defaults if needed
+# vcfa_org = "your-org-name"
+# project_name = "your-project-name"
+# region_name = "your-region-name"
+# vpc_name = "your-vpc-name"
+# zone_name = "your-zone-name" 

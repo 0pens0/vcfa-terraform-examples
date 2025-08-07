@@ -20,7 +20,7 @@ provider "vcfa" {
 }
 
 data "vcfa_kubeconfig" "kubeconfig" {
-  project_name              = "default-project"
+  project_name              = var.project_name
   supervisor_namespace_name = module.supervisor_namespace.namespace
   depends_on = [ module.supervisor_namespace ]
 }

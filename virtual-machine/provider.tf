@@ -14,13 +14,13 @@ terraform {
 provider "vcfa" {
   url                  = var.vcfa_url
   allow_unverified_ssl = true
-  org                  = "acme"
+  org                  = var.vcfa_org
   auth_type            = "api_token"
   api_token            = var.vcfa_refresh_token
 }
 
 data "vcfa_kubeconfig" "kubeconfig" {
-  project_name              = "default-project"
+  project_name              = var.project_name
   supervisor_namespace_name = module.supervisor_namespace.namespace
   depends_on = [ module.supervisor_namespace ]
 }

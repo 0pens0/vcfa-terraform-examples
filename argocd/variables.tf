@@ -14,6 +14,12 @@ variable "vcfa_org" {
   description = "The VCF Automation org"
 }
 
+variable "project_name" {
+  type        = string
+  description = "The VCF Automation project name"
+  default     = "default-project"
+}
+
 variable "region_name" {
   type        = string
 }

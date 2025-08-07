@@ -1,30 +1,40 @@
-# Namespace with ArgoCD integration
+# ArgoCD Example
 
-This example creates a supervisor namespace with an instance of [ArgoCD](https://blogs.vmware.com/cloud-foundation/2025/07/11/gitops-for-vcf-broadcom-argo-cd-operator-now-available/) deployed into it. This will also register the namespace back to ArgoCD, this allows for managining resources in the namespace using ArgoCD.  Finally it will deploy a basic ArgoCD app that creates a VKS cluster. 
+This example deploys ArgoCD in a supervisor namespace.
 
-### Pre-requisites 
+## Configuration
 
-* the [ArgoCD supervisor service](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/vsphere-supervisor-services-and-standalone-components/latest/using-supervisor-services/using-argo-cd-service.html) deployed
+Copy the example configuration file and update it with your values:
+
+```bash
+cp terraform.tfvars.example terraform.tfvars
+# Edit terraform.tfvars with your VCF-A details
+```
+
+### Required Parameters
+- `vcfa_url` - The VCF Automation URL
+- `vcfa_refresh_token` - Your VCF Automation refresh token
+- `vcfa_org` - Your VCF Automation organization name
+- `region_name` - VCF Automation region name
+- `vpc_name` - VCF Automation VPC name
+- `zone_name` - VCF Automation zone name
+
+### Optional Parameters (with defaults)
+- `project_name` - VCF Automation project name (default: "default-project")
 
 ## Usage
 
-1. create a terraform.tfvars file with the below contents 
-
-```
-vcfa_refresh_token = "your-token"
-vcfa_url = "https://your-vcf-url.com"
-vcfa_org = "your-org"
-zone_name = "zone name"
-region_name = "region name"
-vpc_name = "vpc name"
-```
-
-
-3. run terraform, we need to do two applies due to the way the k8s provider works. we need the namespace to exist first to be able to initiate the provider. 
-
 ```bash
 terraform init
-terraform apply -target=module.supervisor_namespace
 terraform plan
 terraform apply
 ```
+
+## What gets created
+
+- A supervisor namespace with the prefix "lab"
+- An ArgoCD instance named "argocd-1"
+- A service account for ArgoCD management
+- A role binding for the service account
+- A cluster secret for namespace registration
+- ArgoCD version 2.14.13+vmware.1-vks.1

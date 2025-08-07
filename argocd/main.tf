@@ -10,6 +10,7 @@ module "supervisor_namespace" {
   zone_name = local.zone_name
   region_name = local.region_name
   vpc_name = local.vpc_name
+  project_name = var.project_name
 }
 
 module "argocd-instance" {
